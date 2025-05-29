@@ -1,4 +1,4 @@
-package org.example.Lesson2_3.case1;
+package Lesson_3.case2;
 
 import java.time.LocalDate;
 
