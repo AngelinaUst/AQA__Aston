@@ -79,12 +79,7 @@ public class Main {
     }
 
     public static boolean checkNumbers(int a, int b) {
-        int sum = a + b;
-        if (10 <= sum && sum <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return 10 <= a + b && a + b <= 20;
     }
 
     public static void number(int a) {
@@ -96,11 +91,7 @@ public class Main {
     }
 
     public static boolean numberLogic(int a) {
-        if (a >= 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return a < 0;
     }
 
     public static void lineNumber(String line, int time) {
@@ -110,11 +101,7 @@ public class Main {
     }
 
     public static boolean leapYear(int year) {
-        if (year % 4 == 0 && (year % 100 != 0 || (year % 100 == 0 && year % 400 == 0))) {
-            return true;
-        } else {
-            return false;
-        }
+        return year % 4 == 0 && (year % 100 != 0 || (year % 100 == 0 && year % 400 == 0));
     }
 
     public static void createArray() {
@@ -138,6 +125,7 @@ public class Main {
         }
         System.out.println();
     }
+
     public static void arrayMultiply() {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < arr.length; i++) {
@@ -148,6 +136,7 @@ public class Main {
         }
         System.out.println();
     }
+
     public static void tableArray() {
         int[][] table = new int[10][10];
         for (int i = 0; i < table.length; i++) {
@@ -161,6 +150,7 @@ public class Main {
             System.out.println();
         }
     }
+
     public static int[] generateArray(int len, int initialValue) {
         int[] arr = new int[len];
         for (int i = 0; i < len; i++) {
