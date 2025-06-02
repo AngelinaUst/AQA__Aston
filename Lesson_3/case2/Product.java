@@ -19,7 +19,8 @@ public class Product {
         this.price = price;
         this.isReserve = isReserve;
     }
-    public void getInformation(){
+
+    public void getInformation() {
         System.out.print(this.name + " ");
         System.out.print(this.productionDate + " ");
         System.out.print(this.manufacturer + " ");
