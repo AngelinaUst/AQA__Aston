@@ -14,7 +14,7 @@ public class Main {
                 Map.of("Философия искусств", 2, "Социология", 2, "Этика", 2)));
         deleteStudents(students);
         transferStudents(students);
-        printStudents(students,2);
+        printStudents(students, 2);
     }
 
     public static void deleteStudents(Set<Student> students) {
@@ -29,9 +29,9 @@ public class Main {
         }
     }
 
-    public static void printStudents(Set<Student> students, int course){
-        for (Student student: students){
-            if (student.course == course){
+    public static void printStudents(Set<Student> students, int course) {
+        for (Student student : students) {
+            if (student.course == course) {
                 System.out.println(student.name);
             }
         }
