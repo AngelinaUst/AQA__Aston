@@ -2,6 +2,7 @@ package Lesson_6.case1;
 
 import java.util.*;
 
+import static Lesson_6.case1.Student.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,25 +16,5 @@ public class Main {
         deleteStudents(students);
         transferStudents(students);
         printStudents(students, 2);
-    }
-
-    public static void deleteStudents(Set<Student> students) {
-        students.removeIf(student -> student.getAverageMark() < 3.0);
-    }
-
-    public static void transferStudents(Set<Student> students) {
-        for (Student student : students) {
-            if (student.getAverageMark() >= 3.0) {
-                student.setCourse(student.getCourse() + 1);
-            }
-        }
-    }
-
-    public static void printStudents(Set<Student> students, int course) {
-        for (Student student : students) {
-            if (student.course == course) {
-                System.out.println(student.name);
-            }
-        }
     }
 }

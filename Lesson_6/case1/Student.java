@@ -1,6 +1,7 @@
 package Lesson_6.case1;
 
 import java.util.Map;
+import java.util.Set;
 
 public class Student {
     public String name;
@@ -41,5 +42,25 @@ public class Student {
             sum += mark;
         }
         return (double) sum / marks.size();
+    }
+
+    public static void deleteStudents(Set<Student> students) {
+        students.removeIf(student -> student.getAverageMark() < 3.0);
+    }
+
+    public static void transferStudents(Set<Student> students) {
+        for (Student student : students) {
+            if (student.getAverageMark() >= 3.0) {
+                student.setCourse(student.getCourse() + 1);
+            }
+        }
+    }
+
+    public static void printStudents(Set<Student> students, int course) {
+        for (Student student : students) {
+            if (student.course == course) {
+                System.out.println(student.name);
+            }
+        }
     }
 }
