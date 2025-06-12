@@ -9,16 +9,19 @@ public class ArithmeticOperationsWithTwoNumbers {
         this.number2 = number2;
     }
 
-    public int sum(){
+    public int sum() {
         return number1 + number2;
     }
-    public int subtraction(){
+
+    public int subtraction() {
         return number1 - number2;
     }
-    public int multiplication(){
+
+    public int multiplication() {
         return number1 * number2;
     }
-    public double division(){
+
+    public double division() {
         return number1 / number2;
     }
 }

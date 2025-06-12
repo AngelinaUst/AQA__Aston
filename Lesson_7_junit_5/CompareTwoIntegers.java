@@ -1,7 +1,7 @@
 package Lesson_7_junit_5;
 
 public class CompareTwoIntegers {
-   private int firstNumber = 1;
+    private int firstNumber = 1;
     private int secondNumber = 2;
 
     public CompareTwoIntegers(int firstNumber, int secondNumber) {

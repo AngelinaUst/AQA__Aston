@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         CalculateFactorial factorial = new CalculateFactorial(3);
         System.out.println("!" + factorial.number + " = " + factorial.calculate());
-        AreaOfATriangle areaOfATriangle = new AreaOfATriangle(3,5, 4);
+        AreaOfATriangle areaOfATriangle = new AreaOfATriangle(3, 5, 4);
         System.out.println("S треугольника = " + areaOfATriangle.calculateAreaOfATriangle());
         CompareTwoIntegers compareTwoIntegers = new CompareTwoIntegers(1, 2);
         System.out.println(compareTwoIntegers.compare());
