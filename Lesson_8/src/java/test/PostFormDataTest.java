@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PostFormDataTest {
     @Test
-    public void whenPostFormData_thenStatus200() {
+    public void testWhenPostFormDataThenStatus200() {
         RequestSpecification requestSpecification = given()
                 .baseUri("https://postman-echo.com")
                 .contentType("multipart/form-data")

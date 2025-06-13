@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PutTextTest {
     @Test
-    public void whenPostFormData_thenStatus200() {
+    public void testWhenPostFormDataThenStatus200() {
         String text = "Test text message";
         RequestSpecification requestSpecification = given()
                 .baseUri("https://postman-echo.com")

@@ -6,7 +6,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class GetRequestTest {
     @Test
-    public void whenGetWithParams_thenStatus200() {
+    public void testWhenGetWithParamsThenStatus200() {
         RequestSpecification requestSpecification = given().
                 baseUri("https://postman-echo.com")
                 .queryParam("foo1", "bar1")

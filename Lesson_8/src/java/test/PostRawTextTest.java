@@ -6,7 +6,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class PostRawTextTest {
     @Test
-    public void whenPostRawText_thenStatus200() {
+    public void testWhenPostRawTextThenStatus200() {
         String body = "{\n" +
                 "    \"test\": \"value\"\n" +
                 "}";
