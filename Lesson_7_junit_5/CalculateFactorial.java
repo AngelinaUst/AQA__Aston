@@ -1,7 +1,7 @@
 package Lesson_7_junit_5;
 
 public class CalculateFactorial {
-    int number;
+    public int number;
 
     public CalculateFactorial(int number) {
         this.number = number;
