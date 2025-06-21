@@ -20,7 +20,7 @@ public class CardFormTest extends BaseTest {
 
         CardFormPage cardFormPage = new CardFormPage(driver);
         cardFormPage.switchToBePaidFrame();
-        String formattedSum = cardFormPage.getSumText().substring(0,amount.length());
+        String formattedSum = cardFormPage.getSumText().substring(0, amount.length());
         String formattedPhone = cardFormPage.getPhoneText().substring(30);
 
         assertEquals(amount, formattedSum, "Сумма не совпадает");

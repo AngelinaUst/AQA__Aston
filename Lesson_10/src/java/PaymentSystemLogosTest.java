@@ -2,6 +2,7 @@ package Lesson_10.src.java;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class PaymentSystemLogosTest extends BaseTest {

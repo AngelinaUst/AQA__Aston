@@ -86,7 +86,7 @@ public class MainPage extends BasePage {
 
     public boolean isConnectionPlaceHoldersCorrect() {
         return phoneInput.getAttribute("placeholder").equals("Номер телефона") &&
-                amountInput.getAttribute("placeholder").equals("Сумма")&&
+                amountInput.getAttribute("placeholder").equals("Сумма") &&
                 emailInput.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
@@ -101,7 +101,7 @@ public class MainPage extends BasePage {
                 By.xpath("//input[@id=\"internet-email\"]")
         ));
         return phone.getAttribute("placeholder").equals("Номер абонента") &&
-                amount.getAttribute("placeholder").equals("Сумма")&&
+                amount.getAttribute("placeholder").equals("Сумма") &&
                 email.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
@@ -116,7 +116,7 @@ public class MainPage extends BasePage {
                 By.xpath("//input[@id=\"instalment-email\"]")
         ));
         return score.getAttribute("placeholder").equals("Номер счета на 44") &&
-                amount.getAttribute("placeholder").equals("Сумма")&&
+                amount.getAttribute("placeholder").equals("Сумма") &&
                 email.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
@@ -131,7 +131,7 @@ public class MainPage extends BasePage {
                 By.xpath("//input[@id=\"arrears-email\"]")
         ));
         return score.getAttribute("placeholder").equals("Номер счета на 2073") &&
-                sum.getAttribute("placeholder").equals("Сумма")&&
+                sum.getAttribute("placeholder").equals("Сумма") &&
                 email.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 }
