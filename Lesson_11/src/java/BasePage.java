@@ -1,4 +1,4 @@
-package Lesson_10.src.java;
+package Lesson_11.src.java;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
