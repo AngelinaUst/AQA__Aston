@@ -1,5 +1,6 @@
-package Lesson_10.src.java;
+package Lesson_11.src.java;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,6 +39,7 @@ public class MainPage extends BasePage {
         super(driver);
     }
 
+    @Step("Открыть базовую страницу и принять куки, если они есть")
     public void open() {
         driver.get(BASE_URL);
         try {
@@ -46,36 +48,44 @@ public class MainPage extends BasePage {
         }
     }
 
+    @Step("Получить текст заголовка блока")
     public String getBlockTitleText() {
         wait.until(ExpectedConditions.visibilityOf(blockTitle));
         return blockTitle.getText();
     }
 
+    @Step("Проверить отображение логотипов платежных систем")
     public boolean arePaymentSystemLogosDisplayed() {
         return !paymentSystemLogos.isEmpty();
     }
 
+    @Step("Нажать на ссылку 'Подробнее'")
     public void clickMoreInfoLink() {
         wait.until(ExpectedConditions.elementToBeClickable(moreInfoLink)).click();
     }
 
+    @Step("Заполнить платежную форму: телефон = {phone}, сумма = {amount}")
     public void fillPaymentForm(String phone, String amount) {
         phoneInput.sendKeys(phone);
         amountInput.sendKeys(amount);
     }
 
+    @Step("Нажать кнопку 'Продолжить'")
     public void clickContinueButton() {
         wait.until(ExpectedConditions.visibilityOf(continueButton)).click();
     }
 
+    @Step("Проверить активность кнопки 'Продолжить'")
     public boolean isContinueButtonEnabled() {
         return continueButton.isEnabled();
     }
 
+    @Step("Открыть выпадающий список сервисов")
     public void openServicesDropdown() {
         wait.until(ExpectedConditions.elementToBeClickable(servicesDropdown)).click();
     }
 
+    @Step("Выбрать опцию '{optionText}' из выпадающего списка")
     public void selectOption(String optionText) {
         openServicesDropdown();
         WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -84,12 +94,14 @@ public class MainPage extends BasePage {
         option.click();
     }
 
+    @Step("Проверить плейсхолдеры для формы 'Связь'")
     public boolean isConnectionPlaceHoldersCorrect() {
         return phoneInput.getAttribute("placeholder").equals("Номер телефона") &&
                 amountInput.getAttribute("placeholder").equals("Сумма") &&
                 emailInput.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
+    @Step("Проверить плейсхолдеры для формы 'Интернет'")
     public boolean isInternetPlaceHoldersCorrect() {
         WebElement phone = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@id=\"internet-phone\"]")
@@ -105,6 +117,7 @@ public class MainPage extends BasePage {
                 email.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
+    @Step("Проверить плейсхолдеры для формы 'Рассрочка'")
     public boolean isInstallmentPlaceHoldersCorrect() {
         WebElement score = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@id=\"score-instalment\"]")
@@ -120,6 +133,7 @@ public class MainPage extends BasePage {
                 email.getAttribute("placeholder").equals("E-mail для отправки чека");
     }
 
+    @Step("Проверить плейсхолдеры для формы 'Задолженность'")
     public boolean isArrearsPlaceHoldersCorrect() {
         WebElement score = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@id=\"score-arrears\"]")

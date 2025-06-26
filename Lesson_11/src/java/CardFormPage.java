@@ -1,5 +1,6 @@
-package Lesson_10.src.java;
+package Lesson_11.src.java;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +18,7 @@ public class CardFormPage extends BasePage {
     @FindBy(css = "iframe.bepaid-iframe")
     private WebElement bepaidIframe;
 
+    @Step("Переключиться на фрейм BePaid")
     public void switchToBePaidFrame() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(bepaidIframe));
     }
@@ -25,22 +27,25 @@ public class CardFormPage extends BasePage {
         super(driver);
     }
 
+    @Step("Получить текст суммы платежа")
     public String getSumText() {
         wait.until(ExpectedConditions.visibilityOf(sumLabel));
         return sumLabel.getText();
     }
 
+    @Step("Получить текст номера телефона")
     public String getPhoneText() {
         wait.until(ExpectedConditions.visibilityOf(phoneLabel));
         return phoneLabel.getText();
     }
 
+    @Step("Проверить отображение логотипов платежных систем")
     public boolean arePaymentSystemLogosDisplayed() {
         List<WebElement> paymentSystemLogos = driver.findElements(
                 By.xpath("//div[contains(@class,'icons-container')]//img"));
         return !paymentSystemLogos.isEmpty();
     }
-
+    @Step("Проверить корректность плейсхолдеров формы оплаты")
     public boolean isPlaceHoldersCorrect() {
         WebElement cardNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@id='cc-number']/following-sibling::label")
